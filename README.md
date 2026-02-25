@@ -22,7 +22,7 @@ A stateless Model Context Protocol (MCP) server that exposes RedTrack attributio
 ## Quick Start (local test)
 ```bash
 npm install
-REDTRACK_KEY=YOUR_KEY node server.mjs
+REDTRACK_KEY=YOUR_KEY node package.json
 ```
 Visit `http://localhost:3000/manifest`.
 
@@ -54,7 +54,7 @@ The IDE will request `/mcp` for the handshake, then `/mcp/run` for tool executio
 Share these 6 files (all under 10) so a senior dev can understand and extend the service:
 | File | Purpose |
 | ---- | ------- |
-| `server.mjs` | Express bootstrap, routing, aliases, JSON-RPC handling |
+| `package.json` | Express bootstrap, routing, aliases, JSON-RPC handling |
 | `redtrack.mjs` | Thin RedTrack API client and tool dispatcher |
 | `manifest.mjs` | In-memory MCP manifest with tool definitions |
 | `package.json` | Dependencies (`express`, `node-fetch`) and start script |
